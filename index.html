@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zaytek - Soluciones y Mantenimiento de Infraestructura</title>
+    <link rel="shortcut icon" href="assets/icons/lion_icon_126113.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+    <!-- <script type="module" src="tailwind.js"></script> -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "yale-blue": "#134074",
+                        "berkeley-blue": "#13315c",
+                        "oxford-blue": "#0b2545",
+                        "powder-blue": "#8da9c4",
+                        "mint-cream": "#eef4ed",
+                        primary: "#114274",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921"
+                    },
+                    fontFamily: { display: "Manrope" },
+                    borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }
+                }
+            }
+        };
+    </script>
 </head>
-<body>
+
+<body class="bg-mint-cream dark:bg-oxford-blue text-oxford-blue dark:text-mint-cream font-display">
+    <header
+        class="sticky top-0 z-10 w-full bg-mint-cream/80 dark:bg-oxford-blue/80 backdrop-blur-sm border-b border-powder-blue/50 dark:border-powder-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-4">
+                    <div class="text-yale-blue">
+                        <img src="assets/icons/lion_icon_126113.ico" alt="iconLogo">
+                    </div>
+                    <h2 class="text-xl font-bold">Zaytek</h2>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
+                    <a class="text-sm font-medium hover:text-yale-blue transition-colors"
+                        href="#servicios">Servicios</a>
+                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#soporte">Soporte</a>
+                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#contacto">Contacto</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a class="hidden sm:inline-block px-4 py-2 text-sm font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors"
+                        href="#contacto">Solicitar Asesoría</a>
+                    <button id="hamburger-button" class="md:hidden p-2 rounded-md hover:bg-yale-blue/10">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-mint-cream/95 dark:bg-oxford-blue/95 absolute w-full backdrop-blur-sm">
+            <nav class="flex flex-col items-center gap-4 py-8">
+                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
+                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#servicios">Servicios</a>
+                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#soporte">Soporte</a>
+                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" class="top-0 min-h-[60vh] md:min-h-[80vh] flex items-end text-white bg-cover bg-center"
+            style='background-image: linear-gradient(to top, rgba(11, 37, 69, 0.8), rgba(19, 49, 92, 0.2)), url("https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-left">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold !leading-tight tracking-tight text-mint-cream">
+                        Soluciones Integrales para su Infraestructura Tecnológica</h1>
+                    <p class="mt-4 text-base md:text-lg text-powder-blue">Ofrecemos servicios expertos de mantenimiento
+                        y solución de problemas para arquitecturas de servidores y dispositivos, garantizando la
+                        continuidad y eficiencia de su negocio.</p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a class="px-5 py-3 text-base font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors shadow-lg"
+                            href="#servicios">Nuestros Servicios</a>
+                        <a class="px-5 py-3 text-base font-bold bg-mint-cream text-oxford-blue rounded-lg hover:bg-powder-blue transition-colors shadow-lg"
+                            href="#contacto">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="servicios" class="py-16 md:py-24 bg-mint-cream dark:bg-oxford-blue">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-oxford-blue dark:text-mint-cream">
+                        Nuestros Servicios de Mantenimiento y Soluciones</h2>
+                    <p class="mt-4 text-lg text-berkeley-blue dark:text-powder-blue">Nos especializamos en mantener su
+                        infraestructura funcionando sin problemas. Desde mantenimiento preventivo hasta la resolución de
+                        incidencias críticas, nuestro equipo está listo para asegurar la estabilidad de sus sistemas.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="soporte" class="py-16 md:py-24 bg-powder-blue/20 dark:bg-berkeley-blue/20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-oxford-blue dark:text-mint-cream">
+                        Soporte Especializado para sus Dispositivos</h2>
+                    <p class="mt-4 text-lg text-berkeley-blue dark:text-powder-blue">Entendemos que cada componente de
+                        su arquitectura es vital. Ofrecemos soporte para una amplia gama de dispositivos y sistemas.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
+                            style='background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+                        </div>
+                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">Mantenimiento de Servidores
+                        </h3>
+                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">Aseguramos el rendimiento
+                            óptimo de sus servidores de aplicaciones y bases de datos con monitoreo proactivo y
+                            actualizaciones constantes.</p>
+                        <a class="mt-4 text-sm font-bold text-yale-blue hover:underline" href="#">Saber más</a>
+                    </div>
+                    <div
+                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
+                            style='background-image: url("https://images.unsplash.com/photo-1593428999588-28a2c4d4c2ce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+                        </div>
+                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">Gestión de Redes</h3>
+                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">Solucionamos problemas de
+                            conectividad y optimizamos la configuración de switches, routers y balanceadores de carga
+                            para un tráfico fluido y seguro.</p>
+                        <a class="mt-4 text-sm font-bold text-yale-blue hover:underline" href="#">Saber más</a>
+                    </div>
+                    <div
+                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
+                            style='background-image: url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+                        </div>
+                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">Soporte a Dispositivos</h3>
+                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">Ofrecemos diagnóstico y
+                            reparación para una variedad de dispositivos de hardware, asegurando que todos los
+                            componentes de su ecosistema funcionen en armonía.</p>
+                        <a class="mt-4 text-sm font-bold text-yale-blue hover:underline" href="#">Saber más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-yale-blue/10 dark:bg-yale-blue/20 py-16 md:py-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-oxford-blue dark:text-mint-cream">
+                    ¿Necesita Soporte Experto?</h2>
+                <p class="mt-4 mb-8 text-lg text-berkeley-blue dark:text-powder-blue max-w-2xl mx-auto">¿Listo para
+                    garantizar la estabilidad y el rendimiento de su infraestructura? Contáctenos para una asesoría
+                    personalizada y sin compromiso.</p>
+                <a class="px-8 py-3 text-base font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors shadow-lg"
+                    href="#contacto">Solicitar Asesoría</a>
+            </div>
+        </section>
+    </main>
+    <footer id="contacto"
+        class="bg-mint-cream dark:bg-oxford-blue border-t border-powder-blue/50 dark:border-powder-blue/20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="text-yale-blue">
+                        <img src="assets/icons/lion_icon_126113.ico" alt="iconLogo">
+                    </div>
+                    <h2 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">Zaytek</h2>
+                </div>
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+                    <a class="text-sm text-berkeley-blue dark:text-powder-blue hover:text-yale-blue transition-colors"
+                        href="#inicio">Inicio</a>
+                    <a class="text-sm text-berkeley-blue dark:text-powder-blue hover:text-yale-blue transition-colors"
+                        href="#servicios">Servicios</a>
+                    <a class="text-sm text-berkeley-blue dark:text-powder-blue hover:text-yale-blue transition-colors"
+                        href="#soporte">Soporte</a>
+                    <a class="text-sm text-berkeley-blue dark:text-powder-blue hover:text-yale-blue transition-colors"
+                        href="#contacto">Contacto</a>
+                </nav>
+            </div>
+            <div
+                class="mt-8 text-center text-sm text-berkeley-blue dark:text-powder-blue border-t border-powder-blue/50 dark:border-powder-blue/20 pt-8">
+                <p><span>©</span><span>Zaytek. Todos los derechos reservados.</span></p>
+            </div>
+        </div>
+    </footer>
     
+    <contact-form id="" ></contact-form>
+
+    <script src="js/menu.js"></script>
 </body>
+
 </html>
