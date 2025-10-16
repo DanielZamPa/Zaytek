@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
-        rel="stylesheet" />    
-    <link href="./output.css" rel="stylesheet">
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
     <script type="module" src="../tailwind.js"></script>
 </head>
 
@@ -36,8 +36,8 @@
                     <a class="hidden sm:inline-block px-4 py-2 text-sm font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors"
                         href="#contacto">Solicitar Asesoría</a>
                     <button id="hamburger-button" class="md:hidden p-2 rounded-md hover:bg-yale-blue/10">
-                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
@@ -50,7 +50,8 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-mint-cream/95 dark:bg-oxford-blue/95 absolute w-full backdrop-blur-sm">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-mint-cream/95 dark:bg-oxford-blue/95 absolute w-full backdrop-blur-sm">
             <nav class="flex flex-col items-center gap-4 py-8">
                 <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
                 <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#servicios">Servicios</a>
@@ -175,9 +176,10 @@
             </div>
         </div>
     </footer>
-    
-    <contact-form id="" ></contact-form>
 
+    <contact-form id=""></contact-form>
+
+    <script src="https://unpkg.com/blendy/dist/blendy.min.js"></script>
     <script src="js/menu.js"></script>
 </body>
 
