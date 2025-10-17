@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Opcional: Cierra el menú al hacer clic en un enlace
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIcon.classList.remove('hidden');
-                closeIcon.classList.add('hidden');
-            });
+        // Usamos delegación de eventos para manejar los clics en los enlaces del menú.
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden'); // Oculta el menú
+                menuIcon.classList.remove('hidden'); // Muestra el ícono de hamburguesa
+                closeIcon.classList.add('hidden'); // Oculta el ícono de cierre
+            }
         });
     }
 });

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de Diagnóstico de Scripts CDN</title>
+</head>
+<body>
+
+    <h1>Prueba de Diagnóstico</h1>
+    <p>Revisa la consola del navegador (F12) para ver los resultados.</p>
+
+    <!-- 1. Cargamos jQuery desde el CDN de Google -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 2. Intentamos usar jQuery -->
+    <script>
+        try {
+            // Si jQuery se cargó, esta línea funcionará y mostrará el objeto jQuery en la consola.
+            console.log("Prueba de jQuery exitosa. El objeto jQuery es:", $);
+        } catch (error) {
+            // Si jQuery no se cargó, esta línea se ejecutará y mostrará el error.
+            console.error("FALLÓ la prueba de jQuery. El error es:", error);
+        }
+    </script>
+
+</body>
+</html>
