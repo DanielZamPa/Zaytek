@@ -1,150 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaytek - Soluciones y Mantenimiento de Infraestructura</title>
-    <link rel="shortcut icon" href="../assets/icons/lion_icon_126113.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
-        rel="stylesheet" />    
-    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
-    <script type="module" src="tailwind.js"></script>
-</head>
-
-<body class="bg-mint-cream dark:bg-oxford-blue text-oxford-blue dark:text-mint-cream font-display">
-    <!-- Encabezado de la pagina -->
-        <!-- Navbar -->
-    <header
-        class="sticky top-0 z-10 w-full bg-mint-cream/80 dark:bg-oxford-blue/80 backdrop-blur-sm border-b border-powder-blue/50 dark:border-powder-blue/20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-4">
-                    <div class="text-yale-blue">
-                        <img src="../assets/icons/lion_icon_126113.ico" alt="iconLogo">
-                    </div>
-                    <h2 class="text-xl font-bold">Zaytek</h2>
-                </div>
-                <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
-                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#servicios">Servicios</a>                    
-                    <a class="text-sm font-medium hover:text-yale-blue transition-colors" href="#contacto">Contacto</a>
-                </nav>
-                <div class="flex items-center gap-4">                    
-                    <button type="button" data-modal-target="#contacto-modal"
-                        class="open-modal hidden sm:inline-block px-4 py-2 text-sm font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors">Solicitar Asesoría</button>
-                    <button id="hamburger-button" class="md:hidden p-2 rounded-md hover:bg-yale-blue/10">
-                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                        </svg>
-                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="1.5"
-                            viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-mint-cream/95 dark:bg-oxford-blue/95 absolute w-full backdrop-blur-sm">
-            <nav class="flex flex-col items-center gap-4 py-8">
-                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
-                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#servicios">Servicios</a>
-                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#soporte">Soporte</a>
-                <a class="text-lg font-medium hover:text-yale-blue transition-colors" href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
-    <!-- Contenido de la pagina -->
-    <main>
-        <!-- Sección de Inicio -->
-        <section id="inicio" class="top-0 min-h-[60vh] md:min-h-[80vh] flex items-end text-white bg-cover bg-center"
-            style='background-image: linear-gradient(to top, rgba(11, 37, 69, 0.8), rgba(19, 49, 92, 0.2)), url("https://images.unsplash.com/photo-1580894908361-967195033215?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
-
-            <!-- Contenedor de Fondo -->
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-left">
-                <div class="max-w-3xl">
-                    <h1 class="text-4xl md:text-6xl font-extrabold !leading-tight tracking-tight text-mint-cream">
-                        Soluciones Integrales para su Infraestructura Tecnológica</h1>
-                    <p class="mt-4 text-base md:text-lg text-white">
-                        Ofrecemos servicios expertos de mantenimiento
-                        y solución de problemas para arquitecturas de servidores y dispositivos, garantizando la
-                        continuidad y eficiencia de su negocio.
-                    </p>
-                    <div class="mt-8 flex flex-wrap gap-4">
-                        <a class="px-5 py-3 text-base font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors shadow-lg"
-                            href="#servicios">Nuestros Servicios</a>
-                        <a class="px-5 py-3 text-base font-bold bg-mint-cream text-oxford-blue rounded-lg hover:bg-powder-blue transition-colors shadow-lg"
-                            href="#contacto">Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="servicios" class="py-16 md:py-24 bg-powder-blue/20 dark:bg-berkeley-blue/20">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-oxford-blue dark:text-mint-cream">
-                        Soporte Especializado para sus Dispositivos</h2>
-                    <p class="mt-4 text-lg text-berkeley-blue dark:text-powder-blue">Entendemos que cada componente de
-                        su arquitectura es vital. Ofrecemos soporte para una amplia gama de dispositivos y sistemas.</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div
-                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
-                            style='background-image: url("../assets/img/ServiciosTI.jpg");'>
-                        </div>
-                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">SERVICIOS GESTIONADOS DE TI
-                        </h3>
-                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">                            
-                            Ofrecemos un monitoreo proactivo, mantenimiento preventivo y soporte técnico continuo para asegurar el rendimiento óptimo y la seguridad de sus sistemas..
-                        </p>
-                        <button type="button" class="open-modal mt-4 text-sm font-bold text-yale-blue hover:underline text-left" data-modal-target="#servicio-ti-modal">Saber más</button>
-                    </div>
-                    <div
-                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
-                            style='background-image: url("../assets/img/Infraestructura.jpg");'>
-                        </div>
-                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">INFRAESTRUCTURA TECNOLÓGICA</h3>
-                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">                            
-                            Diseñamos, implementamos y mantenemos infraestructuras tecnológicas robustas y escalables, incluyendo servidores, redes y sistemas de almacenamiento, adaptadas a las necesidades específicas de su empresa.
-                        </p>
-                        <button type="button" class="open-modal mt-4 text-sm font-bold text-yale-blue hover:underline text-left" data-modal-target="#infraestructura-modal">Saber más</button>
-                    </div>
-                    <div
-                        class="flex flex-col bg-mint-cream dark:bg-oxford-blue p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
-                        <div class="w-full h-48 bg-cover bg-center rounded-lg mb-4"
-                            style='background-image: url("../assets/img/Planeacion.jpg");'>
-                        </div>
-                        <h3 class="text-xl font-bold text-oxford-blue dark:text-mint-cream">GESTIÓN ESTRATÉGICA DE PORTAFOLIO DE PROYECTOS</h3>
-                        <p class="mt-2 text-berkeley-blue dark:text-powder-blue flex-grow">                            
-                            Optimizamos la selección, priorización y gestión de sus proyectos tecnológicos para alinearlos con los objetivos estratégicos de su negocio, maximizando el retorno de inversión y minimizando riesgos.
-                        </p>
-                        <button type="button" class="open-modal mt-4 text-sm font-bold text-yale-blue hover:underline text-left" data-modal-target="#gestion-modal">Saber más</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-yale-blue/10 dark:bg-yale-blue/20 py-16 md:py-24">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-oxford-blue dark:text-mint-cream">
-                    ¿Necesita Soporte Experto?</h2>
-                <p class="mt-4 mb-8 text-lg text-berkeley-blue dark:text-powder-blue max-w-2xl mx-auto">¿Listo para
-                    garantizar la estabilidad y el rendimiento de su infraestructura? Contáctenos para una asesoría
-                    personalizada y sin compromiso.</p>
-                
-                <button type="button" data-modal-target="#contacto-modal"
-                    class="open-modal px-8 py-3 text-base font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors shadow-lg">Solicitar Asesoría</button>
-            </div>
-        </section>
-    </main>
     <!-- Inicia la Plantilla del Footer -->
     <footer id="contacto" class="bg-oxford-blue text-mint-cream border-t border-powder-blue/20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -153,43 +6,46 @@
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-4">
                         <div class="text-yale-blue">
-                            <img src="../assets/icons/lion_icon_126113.ico" alt="iconLogo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/lion_icon_126113.ico" alt="iconLogo">
                         </div>
-                        <h2 class="text-2xl font-bold">Zaytek</h2>
+                        <h2 class="text-2xl font-bold"><?php bloginfo('name'); ?></h2>
                     </div>
                     <p class="mt-4 text-powder-blue/80">
-                        Soluciones integrales para su infraestructura tecnológica, garantizando la continuidad y eficiencia de su negocio.
+                        <?php bloginfo('description'); ?>
                     </p>
                 </div>
     
                 <!-- Columna 2: Enlaces Rápidos -->
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-semibold tracking-wider uppercase">Enlaces Rápidos</h3>
-                    <nav class="mt-4 flex flex-col space-y-2">
-                        <a class="text-powder-blue/80 hover:text-yale-blue transition-colors" href="#inicio">Inicio</a>
-                        <a class="text-powder-blue/80 hover:text-yale-blue transition-colors" href="#servicios">Servicios</a>
-                        <a class="text-powder-blue/80 hover:text-yale-blue transition-colors" href="/acerca.html">Acerca de Nosotros</a>
-                        <a class="text-powder-blue/80 hover:text-yale-blue transition-colors" href="/blog.html">Blog</a>
-                    </nav>
+                    <?php
+                    wp_nav_menu( array(
+                        'theme_location' => 'footer_menu',
+                        'container'      => 'nav',
+                        'container_class'=> 'mt-4 flex flex-col space-y-2',
+                        'fallback_cb'    => false,
+                    ) );
+                    ?>
                 </div>
     
                 <!-- Columna 3: Formulario de Contacto -->
                 <div class="md:col-span-1">
                     <h3 class="text-lg font-semibold tracking-wider uppercase">Contáctanos</h3>
-                    <form class="mt-4 space-y-4">
+                    <!-- Este formulario necesita un backend. Se recomienda usar un plugin como Contact Form 7 o WPForms. -->
+                    <form id="footer-contact-form" class="mt-4 space-y-4" method="POST">
                         <div>
                             <label for="footer-nombre" class="sr-only">Nombre</label>
-                            <input type="text" id="footer-nombre" name="nombre" required placeholder="Tu Nombre Completo"
+                            <input type="text" id="footer-nombre" name="footer-nombre" required placeholder="Tu Nombre Completo"
                                 class="w-full px-3 py-2 bg-berkeley-blue/30 border border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition placeholder:text-powder-blue/50">
                         </div>
                         <div>
                             <label for="footer-email" class="sr-only">Email</label>
-                            <input type="email" id="footer-email" name="email" required placeholder="Tu Correo Electrónico"
+                            <input type="email" id="footer-email" name="footer-email" required placeholder="Tu Correo Electrónico"
                                 class="w-full px-3 py-2 bg-berkeley-blue/30 border border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition placeholder:text-powder-blue/50">
                         </div>
                         <div>
                             <label for="footer-mensaje" class="sr-only">Mensaje</label>
-                            <textarea id="footer-mensaje" name="mensaje" rows="3" required placeholder="¿En qué podemos ayudarte?"
+                            <textarea id="footer-mensaje" name="footer-mensaje" rows="3" required placeholder="¿En qué podemos ayudarte?"
                                 class="w-full px-3 py-2 bg-berkeley-blue/30 border border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition placeholder:text-powder-blue/50"></textarea>
                         </div>
                         <button type="submit" class="w-full px-5 py-2 text-sm font-bold text-mint-cream bg-yale-blue rounded-lg hover:bg-berkeley-blue transition-colors">Enviar Mensaje</button>
@@ -199,7 +55,7 @@
     
             <!-- Barra Inferior del Footer -->
             <div class="mt-16 pt-8 border-t border-powder-blue/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-powder-blue/60">© <span id="current-year"></span> Zaytek. Todos los derechos reservados.</p>
+                <p class="text-sm text-powder-blue/60">© <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. Todos los derechos reservados.</p>
                 <div class="flex items-center gap-4">
                     <!-- Iconos de redes sociales (ejemplo) -->
                     <a href="#" class="text-powder-blue/60 hover:text-yale-blue transition-colors">
@@ -231,25 +87,26 @@
                 <p class="mt-2 text-berkeley-blue dark:text-powder-blue">
                     Déjenos sus datos y uno de nuestros expertos se pondrá en contacto con usted a la brevedad.
                 </p>
-                <form class="mt-6 space-y-4">
+                <!-- Este formulario necesita un backend. Se recomienda usar un plugin como Contact Form 7 o WPForms. -->
+                <form id="modal-contact-form" class="mt-6 space-y-4" method="POST">
                     <div>
                         <label for="nombre" class="block text-sm font-medium text-berkeley-blue dark:text-powder-blue mb-1">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" required
+                        <input type="text" id="modal-nombre" name="modal-nombre" required
                             class="w-full px-3 py-2 bg-white dark:bg-berkeley-blue/30 border border-powder-blue/50 dark:border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-berkeley-blue dark:text-powder-blue mb-1">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" required
+                        <input type="email" id="modal-email" name="modal-email" required
                             class="w-full px-3 py-2 bg-white dark:bg-berkeley-blue/30 border border-powder-blue/50 dark:border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition">
                     </div>
                     <div>
                         <label for="telefono" class="block text-sm font-medium text-berkeley-blue dark:text-powder-blue mb-1">Teléfono (Opcional)</label>
-                        <input type="tel" id="telefono" name="telefono"
+                        <input type="tel" id="modal-telefono" name="modal-telefono"
                             class="w-full px-3 py-2 bg-white dark:bg-berkeley-blue/30 border border-powder-blue/50 dark:border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition">
                     </div>
                     <div>
                         <label for="mensaje" class="block text-sm font-medium text-berkeley-blue dark:text-powder-blue mb-1">¿Cómo podemos ayudarle?</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" required
+                        <textarea id="modal-mensaje" name="modal-mensaje" rows="4" required
                             class="w-full px-3 py-2 bg-white dark:bg-berkeley-blue/30 border border-powder-blue/50 dark:border-powder-blue/20 rounded-md focus:ring-yale-blue focus:border-yale-blue transition"></textarea>
                     </div>
                     <div class="flex justify-end gap-4 pt-2">
@@ -262,7 +119,7 @@
     </div>
 
     <!-- Modales de Servicios -->
-    <div id="servicio-ti-modal" class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
+    <!-- <div id="servicio-ti-modal" class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4 backdrop-blur-sm">
         <div class="w-full max-w-2xl rounded-xl bg-mint-cream dark:bg-oxford-blue shadow-2xl overflow-hidden">
             <div class="p-6 md:p-8">
                 <div class="flex justify-between items-start gap-4">
@@ -352,11 +209,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <script src="js/main.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/servicios.js"></script>
+    <?php wp_footer(); ?>
 </body>
 
 </html>

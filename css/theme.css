@@ -1,0 +1,463 @@
+/*
+ * Zaytek Theme - Custom Stylesheet
+ * Version: 2.0
+ * Description: Rediseño corporativo y profesional.
+*/
+
+/* --- 1. Variables y Estilos Base --- */
+:root {
+    --mint-cream: #F5FFFA;
+    --oxford-blue: #0B2545;
+    --yale-blue: #13495C;
+    --berkeley-blue: #13315C;
+    --powder-blue: #AEC3B0;
+    --text-light: #F5FFFA;
+    --text-dark: #0B2545;
+    --text-muted-light: #AEC3B0;
+    --text-muted-dark: #13315C;
+    --border-light: rgba(174, 195, 176, 0.5);
+    --border-dark: rgba(174, 195, 176, 0.2);
+    --radius: 0.5rem; /* 8px */
+    --transition: all 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--mint-cream);
+    margin: 0;
+    color: var(--text-dark);
+}
+
+body.dark {
+    background-color: var(--oxford-blue);
+    color: var(--text-light);
+}
+
+/* --- 2. Layout y Contenedores --- */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* --- 3. Header y Navegación --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: rgba(245, 255, 250, 0.8); /* mint-cream/80 */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-light);
+    transition: var(--transition);
+}
+body.dark header {
+    background-color: rgba(11, 37, 69, 0.8); /* oxford-blue/80 */
+    border-bottom-color: var(--border-dark);
+}
+header .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem; /* 80px */
+}
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+header .logo-container h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+header nav a {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: var(--transition);
+    position: relative;
+    padding-bottom: 0.25rem;
+}
+body.dark header nav a {
+    color: var(--text-light);
+}
+header nav a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--yale-blue);
+    transition: var(--transition);
+}
+header nav a:hover:after,
+header nav .current-menu-item a:after {
+    width: 100%;
+}
+header nav a:hover {
+    color: var(--yale-blue);
+}
+body.dark header nav a:hover {
+    color: var(--powder-blue);
+}
+body.dark header nav a:after {
+    background-color: var(--powder-blue);
+}
+
+/* --- 4. Botones y Enlaces --- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 700;
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background-color: var(--yale-blue);
+    color: var(--text-light);
+}
+.btn-primary:hover {
+    background-color: var(--berkeley-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(19, 73, 92, 0.2);
+}
+.btn-secondary {
+    background-color: var(--mint-cream);
+    color: var(--oxford-blue);
+    border-color: var(--powder-blue);
+}
+.btn-secondary:hover {
+    background-color: var(--powder-blue);
+    color: var(--berkeley-blue);
+    transform: translateY(-2px);
+}
+
+ul, .nav-link{    
+    list-style: none;
+    text-decoration: none;
+}
+
+/* --- 5. Secciones Específicas --- */
+
+/* Sección */
+#inicio {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--berkeley-blue);
+    background-image: url(../assets/img/encabezado.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+#inicio h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1 !important;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+#inicio p {
+    font-size: 1.25rem;
+    max-width: 60ch;
+    margin-top: 1.5rem;
+    color: rgba(245, 255, 250, 0.9);
+}
+#inicio .hero-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Sección de Título (para Servicios, etc.) */
+.section-title {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section-title h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.section-title p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: var(--text-muted-dark);
+}
+body.dark .section-title p {
+    color: var(--text-muted-light);
+}
+
+/* Sección Servicios */
+#servicios {
+    background-color: rgba(174, 195, 176, 0.15);
+}
+body.dark #servicios {
+    background-color: rgba(19, 49, 92, 0.2);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.service-card {
+    background-color: var(--mint-cream);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 4px 6px rgba(11, 37, 69, 0.05);
+    transition: var(--transition);
+}
+body.dark .service-card {
+    background-color: var(--oxford-blue);
+    border-color: var(--border-dark);
+    box-shadow: none;
+}
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(11, 37, 69, 0.1);
+}
+body.dark .service-card:hover {
+    background-color: var(--berkeley-blue);
+    border-color: var(--yale-blue);
+}
+.service-card .card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+}
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+.service-card p {
+    color: var(--text-muted-dark);
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+body.dark .service-card p {
+    color: var(--text-muted-light);
+}
+.service-card .card-link {
+    font-weight: 700;
+    color: var(--yale-blue);
+    text-decoration: none;
+    transition: var(--transition);
+}
+.service-card .card-link:hover {
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+}
+
+/* Sección CTA (Call to Action) */
+.cta-section {
+    background-color: var(--yale-blue);
+    color: var(--text-light);
+    text-align: center;
+}
+.cta-section h2 {
+    color: var(--text-light);
+}
+.cta-section p {
+    color: rgba(245, 255, 250, 0.9);
+}
+.cta-section .btn {
+    background-color: var(--mint-cream);
+    color: var(--oxford-blue);
+    margin-top: 2rem;
+}
+.cta-section .btn:hover {
+    background-color: var(--powder-blue);
+}
+
+/* --- 6. Footer --- */
+footer {
+    background-color: var(--oxford-blue);
+    color: var(--text-light);
+    border-top: 1px solid var(--border-dark);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+footer h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    color: var(--powder-blue);
+}
+footer p, footer a {
+    color: var(--text-muted-light);
+    transition: var(--transition);
+}
+footer a:hover {
+    color: var(--mint-cream);
+}
+footer .footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+footer .social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* --- 7. Formularios --- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: rgba(19, 49, 92, 0.5); /* berkeley-blue/50 */
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius);
+    color: var(--text-light);
+    transition: var(--transition);
+}
+input::placeholder, textarea::placeholder {
+    color: rgba(174, 195, 176, 0.7);
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--powder-blue);
+    box-shadow: 0 0 0 3px rgba(174, 195, 176, 0.3);
+}
+
+/* --- 8. Modales --- */
+.modal {
+    display: none; /* JS controla la visibilidad */
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(11, 37, 69, 0.7);
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: var(--mint-cream);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 50rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+body.dark .modal-content {
+    background-color: var(--oxford-blue);
+}
+
+/* --- 9. Clases de Ayuda de WordPress --- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.hidden {
+    display: none !important;
+}
+.flex {
+    display: flex !important;
+}
+
+/* --- 10. Clases de Utilidad para Layout --- */
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.flex-col { flex-direction: column; }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Clases responsivas para el menú */
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex !important;
+    }
+    .md\:hidden {
+        display: none !important;
+    }
+}
+
+/* Estilos para el botón de hamburguesa */
+#hamburger-button {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+#hamburger-button:hover {
+    background-color: rgba(19, 73, 92, 0.1); /* yale-blue/10 */
+}
+body.dark #hamburger-button:hover {
+    background-color: rgba(174, 195, 176, 0.1); /* powder-blue/10 */
+}
+
+/* --- 11. Estilos para el Menú Móvil --- */
+#mobile-menu {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(245, 255, 250, 0.95); /* mint-cream/95 */
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--border-light);
+}
+body.dark #mobile-menu {
+    background-color: rgba(11, 37, 69, 0.95); /* oxford-blue/95 */
+    border-bottom-color: var(--border-dark);
+}
+#mobile-menu nav ul {
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #nav-options{
+        display: hidden;
+    }
+}
+
+#presentacion{
+    background-color: var(--powder-blue);
+}
