@@ -14,7 +14,7 @@
 get_header();
 ?>
 
-<main id="main" class="site-main container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+<main id="main" class="site-main container">
 
     <?php if ( have_posts() ) : ?>
 
@@ -23,7 +23,7 @@ get_header();
         while ( have_posts() ) :
             the_post();
             ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class('mb-12 prose dark:prose-invert max-w-none'); ?>>
+            <article id="post-<?php the_ID(); ?>" <?php post_class('post-entry'); ?>>
                 <header class="entry-header mb-4">
                     <?php the_title( '<h1 class="entry-title text-4xl font-bold">', '</h1>' ); ?>
                 </header>
