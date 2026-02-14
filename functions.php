@@ -15,16 +15,44 @@ if ( ! defined( '_S_VERSION' ) ) {
 /**
  * Enqueue scripts and styles.
  */
-function zaytek_scripts() {
-	// Carga nuestra hoja de estilos principal.
-	wp_enqueue_style( 'zaytek-style', get_template_directory_uri() . '/css/theme.css', array(), _S_VERSION );
-}
-add_action( 'wp_enqueue_scripts', 'zaytek_scripts' );
 
-/**
- * Registra las ubicaciones de los menús de navegación.
- */
-function zaytek_register_nav_menu() {
-    register_nav_menus( array( 'primary_menu' => __( 'Menú Principal', 'zaytek' ) ) );
+function zaytek_setup() {
+    // 1. Registrar las ubicaciones de los menús
+    register_nav_menus(
+        array(
+            'primary_menu' => 'Menú Principal',
+            'footer_menu'  => 'Menú Footer',
+        )
+    );
+
+    // Soporte básico del tema
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 }
-add_action( 'after_setup_theme', 'zaytek_register_nav_menu' );
+add_action('after_setup_theme', 'zaytek_setup');
+
+// 2. Agregar clase 'nav-item' a los <li> del menú para Bootstrap
+function zaytek_menu_css_class($classes, $item, $args) {
+    if (isset($args->theme_location) && $args->theme_location === 'primary_menu') {
+        $classes[] = 'nav-item';
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class', 'zaytek_menu_css_class', 10, 3);
+
+// 3. Agregar clase 'nav-link' a los <a> del menú para Bootstrap
+function zaytek_menu_link_attributes($atts, $item, $args) {
+    if (isset($args->theme_location) && $args->theme_location === 'primary_menu') {
+        $atts['class'] = 'nav-link';
+    }
+    return $atts;
+}
+add_filter('nav_menu_link_attributes', 'zaytek_menu_link_attributes', 10, 3);
+
+function zaytek_scripts(){
+	wp_enqueue_style( 'zaytek-style', get_stylesheet_uri(),  array(), _S_VERSION);
+	wp_enqueue_style( 'zaytek-bg-patern', get_template_directory_uri() . '/src/css/global.css', array(), '2.0');
+}
+
+add_action( 'wp_enqueue_scripts', 'zaytek_scripts' );
+?>
