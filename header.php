@@ -4,7 +4,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/icons/logo/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" type="image/x-icon">
     <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
@@ -18,8 +18,12 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/lion_icon_126113.ico" alt="Logo de Zaitek" class="d-inline-block align-text-center">
+                <a class="navbar-brand d-flex justify-content-between align-items-center gap-1" href="<?php echo esc_url(home_url('/')); ?>">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/android-chrome-192x192.png">
+                        <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/apple-touch-icon.png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" alt="Logo de Zaitek" width="30" height="30" class="d-inline-block align-text-top">
+                    </picture>
                     Zaitek
                 </a>
                 <?php if (has_nav_menu('primary_menu')):?>
@@ -53,7 +57,9 @@
                                 </p>                                
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." width="600px" height="400px"></div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                            <img class="img-fluid rounded-3 my-5" src="<?php echo get_template_directory_uri(); ?>/src/assets/img/encabezado.jpg" alt="..." width="600px" height="400px">
+                        </div>
                     </div>
                 </div>
         </div>
