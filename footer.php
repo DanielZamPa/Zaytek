@@ -13,7 +13,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico"
                                 alt="Logo de Zaitek" width="30" height="30" class="d-inline-block align-text-top">
                         </picture>
-                        <h2 class="h4 fw-bold mb-0"><?php bloginfo('name'); ?></h2>
+                        <h2 class="h4 fw-bold mb-0">ZAITEK</h2>
                     </div>
                     <p class="text-white-50">
                         <?php bloginfo('description'); ?>
@@ -47,6 +47,10 @@
                             <label for="footer-email" class="visually-hidden">Email</label>
                             <input type="email" id="footer-email" name="footer-email" required
                                 placeholder="Tu Correo Electrónico" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modal-telefono" class="form-label" placeholder="Teléfono (Opcional)"></label>
+                            <input type="tel" id="modal-telefono" name="modal-telefono" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="footer-mensaje" class="visually-hidden">Mensaje</label>
@@ -130,6 +134,7 @@
             </div>
         </div>
     </div>
+    <?php get_template_part( 'modal' ); ?>
     <?php wp_footer(); ?>
     </body>
 

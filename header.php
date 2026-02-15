@@ -5,13 +5,11 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" type="image/x-icon">
-    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
     <?php wp_head(); ?>
 </head>
 
-<body class="d-flex flex-column" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
     <!-- Encabezado de la pagina -->
         <!-- Navbar -->
@@ -24,7 +22,7 @@
                         <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/apple-touch-icon.png">
                         <img src="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" alt="Logo de Zaitek" width="30" height="30" class="d-inline-block align-text-top">
                     </picture>
-                    Zaitek
+                    ZAITEK
                 </a>
                 <?php if (has_nav_menu('primary_menu')):?>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,13 +45,13 @@
 
         <!-- Creacion de hero según sección o pagina actual -->
         <?php?>
-        <div class="hero container-xxl d-flex justify-content-center align-items-center h-100 bg-dark py-5">
+        <div class="bg-hero container-xxl d-flex justify-content-center align-items-center h-100 py-5">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-lg-8 col-xl-7 col-xxl-6">
                         <div class="my-5 text-center text-xl-start">
                                 <h1 class="display-1 fw-bolder text-white mb-2">ZAITEK</h1>                                
-                                <p class="lead fw-normal text-white-50 mb-4">Somos tu aliado en soporte TI, servidores, virtualización, seguridad y desarrollo web, enfocados en soluciones reales, escalables y confiables para empresas que necesitan resultados, no problemas.                                
+                                <p class="lead fw-normal text-white mb-4">Somos tu aliado en soporte TI, servidores, virtualización, seguridad y desarrollo web, enfocados en soluciones reales, escalables y confiables para empresas que necesitan resultados, no problemas.                                
                                 </p>                                
                             </div>
                         </div>

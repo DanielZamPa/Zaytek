@@ -50,8 +50,15 @@ function zaytek_menu_link_attributes($atts, $item, $args) {
 add_filter('nav_menu_link_attributes', 'zaytek_menu_link_attributes', 10, 3);
 
 function zaytek_scripts(){
+    // llamado Bootstrap css local desde node_modules
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', array(), '5.3.3');
+
+    //Estilos css
 	wp_enqueue_style( 'zaytek-style', get_stylesheet_uri(),  array(), _S_VERSION);
-	wp_enqueue_style( 'zaytek-bg-patern', get_template_directory_uri() . '/src/css/global.css', array(), '2.0');
+	wp_enqueue_style( 'zaytek-bg-patern', get_template_directory_uri() . '/css/global.css', array(), '2.0');
+
+    //Scripts de bootstrap desde node_modules
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
 }
 
 add_action( 'wp_enqueue_scripts', 'zaytek_scripts' );
