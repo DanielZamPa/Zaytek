@@ -14,13 +14,13 @@
     <!-- Encabezado de la pagina -->
         <!-- Navbar -->
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg fixed-top bg-opacity-75 bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex justify-content-between align-items-center gap-1" href="<?php echo esc_url(home_url('/')); ?>">
+                <a class="navbar-brand d-flex justify-content-between align-items-center" href="<?php echo esc_url(home_url('/')); ?>">
                     <picture>
                         <source media="(max-width: 576px)" srcset="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/android-chrome-192x192.png">
                         <source media="(max-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/apple-touch-icon.png">
-                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" alt="Logo de Zaitek" width="30" height="30" class="d-inline-block align-text-top">
+                        <img src="<?php echo get_template_directory_uri(); ?>/src/assets/icons/logo/favicon.ico" alt="Logo de Zaitek" width="auto" height="24px" class="d-inline-block align-text-top">
                     </picture>
                     ZAITEK
                 </a>
@@ -45,19 +45,16 @@
 
         <!-- Creacion de hero según sección o pagina actual -->
         <?php?>
-        <div class="bg-hero container-xxl d-flex justify-content-center align-items-center h-100 py-5">
+        <div class="bg-hero container-xxl d-flex justify-content-center align-items-center my-5 py-5">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center justify-content-center">
                     <div class="col-lg-8 col-xl-7 col-xxl-6">
-                        <div class="my-5 text-center text-xl-start">
-                                <h1 class="display-1 fw-bolder text-white mb-2">ZAITEK</h1>                                
-                                <p class="lead fw-normal text-white mb-4">Somos tu aliado en soporte TI, servidores, virtualización, seguridad y desarrollo web, enfocados en soluciones reales, escalables y confiables para empresas que necesitan resultados, no problemas.                                
+                        <div class="my-5 text-center text-xl">
+                                <p class="h1 display-1 fw-bolder text-white mb-2 t-shadow">ZAITEK</p>                                
+                                <p class="lead fw-normal text-white mb-4 t-shadow">Somos tu aliado en soporte TI, servidores, virtualización, seguridad y desarrollo web, enfocados en soluciones reales, escalables y confiables para empresas que necesitan resultados, no problemas.                                
                                 </p>                                
                             </div>
-                        </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                            <img class="img-fluid rounded-3 my-5" src="<?php echo get_template_directory_uri(); ?>/src/assets/img/encabezado.jpg" alt="..." width="600px" height="400px">
-                        </div>
+                        </div>                        
                     </div>
                 </div>
         </div>

@@ -56,6 +56,7 @@ function zaytek_scripts(){
     //Estilos css
 	wp_enqueue_style( 'zaytek-style', get_stylesheet_uri(),  array(), _S_VERSION);
 	wp_enqueue_style( 'zaytek-bg-patern', get_template_directory_uri() . '/css/global.css', array(), '2.0');
+	wp_enqueue_style( 'zaytek-bg-hero', get_template_directory_uri() . '/css/hero.css', array(), '1.0');
 
     //Scripts de bootstrap desde node_modules
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array(), '5.3.3', true);
